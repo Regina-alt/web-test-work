@@ -24,7 +24,11 @@
         "preferred-install": {
             "*": "dist"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "symfony/flex": true,
+            "symfony/runtime": true
+        }
     },
     "autoload": {
         "psr-4": {
@@ -63,6 +67,8 @@
         }
     },
     "require-dev": {
-        "symfony/maker-bundle": "^1.33"
+        "phpunit/phpunit": "9.5",
+        "symfony/maker-bundle": "^1.33",
+        "symfony/phpunit-bridge": "^7.1"
     }
 }

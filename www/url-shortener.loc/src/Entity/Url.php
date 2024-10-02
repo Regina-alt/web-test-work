@@ -32,6 +32,13 @@ class Url
      */
     private $createdDate;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $expiresAt;
+
+    private bool $sent = false;
+
     public function __construct()
     {
         $date = new \DateTimeImmutable();
@@ -42,6 +49,29 @@ class Url
     public function getId(): ?int
     {
         return $this->id;
+    }
+    public function getExpiresAt(): ?\DateTimeInterface
+    {
+        return $this->expiresAt;
+    }
+
+    public function setExpiresAt(?\DateTimeInterface $expiresAt): self
+    {
+        $this->expiresAt = $expiresAt;
+
+        return $this;
+    }
+
+    public function isSent(): ?bool
+    {
+        return $this->sent;
+    }
+
+    public function setSent(bool $sent): self
+    {
+        $this->sent = $sent;
+
+        return $this;
     }
 
     public function getUrl(): ?string
