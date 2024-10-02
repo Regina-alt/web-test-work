@@ -15,3 +15,5 @@ This is a test work from Web Department of Unigine Company.
 
 * To encode ```someurl``` you can use ```/encode-url?url=someurl``` endpoint
 * To decode ```somehash``` you can use ```/decode-url?hash=somehash``` endpoint
+* To redirect ```somehash``` you can use ```/gourl?hash=somehash``` endpoint
+* To see stats you can use /api/urls/stats?start_date=```date start```&end_date=```date end```&domain=```someurl```
